@@ -5,5 +5,5 @@ import java.io.FileNotFoundException;
 import java.util.Collection;
 
 public interface ContactsFileImporter {
-    Collection<Contact> imporContacts(String fileName) throws FileNotFoundException;
+    Collection<Contact> importContacts(String fileName) throws FileNotFoundException;
 }

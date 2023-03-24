@@ -12,7 +12,7 @@ import Models.Contact;
 public class CsvFileImporter implements ContactsFileImporter {
 
     @Override
-    public Collection<Contact> imporContacts(String fileName) throws FileNotFoundException {
+    public Collection<Contact> importContacts(String fileName) throws FileNotFoundException {
         List<Contact> contacts = new ArrayList<>();
 
         try (Scanner scanner = new Scanner(new File(fileName))) {

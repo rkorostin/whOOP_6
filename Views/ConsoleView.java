@@ -17,32 +17,25 @@ public class ConsoleView implements View {
     }
 
     public void showMenu() {
-        System.out.println("Выберите действие: ");
-        System.out.println("1. Посмотреть контакты");
-        System.out.println("2. Добавить контакт");
-        System.out.println("3. Удалить контакт");
-        System.out.println("4. Обновить контакт");
-        System.out.println("5. Поиск по телефону");
-        System.out.println("6. Поиск по имени");
-        System.out.println("7. Импорт из CSV");
-        System.out.println("8. Экспорт в CSV");
-        System.out.println("0. Выход");
-    }
-    public void printErrorMassage(String message){
-        System.out.println(message);
-    }
-
-    public void start() {
         boolean running = true;
         while (running) {
-
+            System.out.println("Выберите действие: ");
+            System.out.println("1. Посмотреть контакты");
+            System.out.println("2. Добавить контакт");
+            System.out.println("3. Удалить контакт");
+            System.out.println("4. Обновить контакт");
+            System.out.println("5. Поиск по телефону");
+            System.out.println("6. Поиск по имени");
+            System.out.println("7. Импорт из CSV");
+            System.out.println("8. Экспорт в CSV");
+            System.out.println("0. Выход");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
 
             switch (choice) {
                 case 1:
-                    // phoneBook.displayContacts();
+                    //
                     break;
                 case 2:
                     System.out.println("Введите имя: ");
@@ -84,13 +77,11 @@ public class ConsoleView implements View {
                     break;
                 case 7:
                     System.out.println("(Импорт данных) введите имя файла:");
-                    // String fileName = scanner.nextLine();
-                    // phoneBook.importFromCSV(fileName);
+                    //
                     break;
                 case 8:
                     System.out.println("(Экспорт данных) введите имя файла:");
-                    // fileName = scanner.nextLine();
-                    // phoneBook.exportToCSV(fileName);
+                    //
                     break;
                 case 0:
                     running = false;
@@ -101,4 +92,9 @@ public class ConsoleView implements View {
             }
         }
     }
+
+    public void printErrorMassage(String message) {
+        System.out.println(message);
+    }
+
 }

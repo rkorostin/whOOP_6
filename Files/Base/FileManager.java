@@ -29,6 +29,6 @@ public abstract class FileManager {
     }
 
     public Collection<Contact> readContacts() throws FileNotFoundException {
-        return importer.imporContacts(fileName);
+        return importer.importContacts(fileName);
     }
 }
